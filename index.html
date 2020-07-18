@@ -1,0 +1,60 @@
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+	function remove()
+	{
+		$('#ans').val(
+			function(index, value){
+				return value.substr(0, value.length - 1);
+		})
+	}
+	function squreroot()
+	{
+		var result = Math.sqrt(parseInt(ans.value));
+		ans.value = result;
+	}
+	</script>
+	<title>Calculator</title>
+</head>
+<body>
+<div class="calculator">
+	<div>
+    	
+		<input type="text" id="ans">
+        		          
+		<button value="1" onClick="ans.value += '1'">1</button>
+		<button value="2" onClick="ans.value += '2'">2</button>
+		<button value="3" onClick="ans.value += '3'">3</button>
+    	<button value="+" onClick="ans.value += '+'">&plus;</button>
+        
+		<button value="4" onClick="ans.value += '4'">4</button>
+		<button value="5" onClick="ans.value += '5'">5</button>
+		<button value="6" onClick="ans.value += '6'">6</button>
+		<button value="-" onClick="ans.value += '-'">&minus;</button>
+        
+		<button value="7" onClick="ans.value += '7'">7</button>
+		<button value="8" onClick="ans.value += '8'">8</button>
+		<button value="9" onClick="ans.value += '9'">9</button>
+		<button value="*" onClick="ans.value += '*'">&times;</button>
+        
+		<button value="0" onClick="ans.value += '0'">0</button>
+		<button value="00" onClick="ans.value += '00'">00</button>
+		<button onClick="ans.value += '.'">.</button>
+		<button value="/" onClick="ans.value += '/'">&div;</button>
+        
+        
+		
+        
+	</div>
+    <div>
+        <button onClick="ans.value = ''">C</button>
+		<button onClick="remove();">CE</button>
+		<button value="%" onClick="ans.value += '%'">&percnt;</button>  
+		<button value="&radic;" onClick="squreroot();">&radic;</button>        
+        <button onClick="ans.value = eval(ans.value)">=</button>
+    </div>
+</div>
+</body>
+</html>
